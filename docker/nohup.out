@@ -1,0 +1,66 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.40kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/ros:foxy
+#2 DONE 9.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [ 1/14] FROM docker.io/library/ros:foxy@sha256:d37894e6bc05bbac32d34431db2b2c00254513b665d999061855236a3a19b102
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 65B done
+#5 DONE 0.1s
+
+#6 [ 4/14] RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&    sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/' ~/.zshrc &&    echo "source /opt/ros/foxy/setup.zsh" >> ~/.zshrc
+#6 CACHED
+
+#7 [10/14] RUN npm install http-server -g
+#7 CACHED
+
+#8 [ 3/14] RUN apt-get update &&     apt-get install vim nano git tmux wget curl python3-pip net-tools iputils-ping zsh fonts-powerline -y
+#8 CACHED
+
+#9 [11/14] RUN mkdir -p /home/exomy/exomy_ws/src
+#9 CACHED
+
+#10 [13/14] RUN echo ". /opt/ros/foxy/setup.bash" >> ~/.bashrc
+#10 CACHED
+
+#11 [ 9/14] RUN sudo apt-get update &&     sudo apt-get install nodejs -y
+#11 CACHED
+
+#12 [ 5/14] RUN sudo apt-get update &&     sudo apt-get install ros-foxy-joy -y
+#12 CACHED
+
+#13 [ 8/14] RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+#13 CACHED
+
+#14 [12/14] WORKDIR /root
+#14 CACHED
+
+#15 [ 2/14] RUN ln -snf /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime && echo Europe/Amsterdam > /etc/timezone
+#15 CACHED
+
+#16 [ 7/14] COPY i2c_fix.py /usr/local/lib/python3.8/dist-packages/Adafruit_GPIO/I2C.py
+#16 CACHED
+
+#17 [ 6/14] RUN pip3 install adafruit-pca9685
+#17 CACHED
+
+#18 [14/14] ADD entrypoint.sh /entrypoint.sh
+#18 CACHED
+
+#19 exporting to image
+#19 exporting layers done
+#19 writing image sha256:d15374cee2072946de4df498dfbe5c0cd7dbd04371ade1d878356dec8b72e7dd done
+#19 naming to docker.io/library/exomy 0.0s done
+#19 DONE 0.0s
+f6d65589eeae
+the input device is not a TTY
